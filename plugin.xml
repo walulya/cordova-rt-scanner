@@ -35,17 +35,17 @@
         <!--
         <source-file src="src/android/libs/android-support-annotations.jar" target-dir="libs" />
         -->
-        <resource-file src="src/android/libs/arm64-v8a/libIAL.so" target="libs/arm64-v8a/libIAL.so">
-<resource-file src="src/android/libs/arm64-v8a/libSDL.so" target="libs/arm64-v8a/libSDL.so">
-<resource-file src="src/android/libs/arm64-v8a/libbarcodereader44.so" target="libs/arm64-v8a/libbarcodereader44.so">
-<resource-file src="src/android/libs/arm64-v8a/libbarcodereader70.so" target="libs/arm64-v8a/libbarcodereader70.so">
-<resource-file src="src/android/libs/arm64-v8a/libbarcodereader80.so" target="libs/arm64-v8a/libbarcodereader80.so">
-<resource-file src="src/android/libs/armeabi/libIAL.so" target="libs/armeabi/libIAL.so">
-<resource-file src="src/android/libs/armeabi/libSDL.so" target="libs/armeabi/libSDL.so">
-<resource-file src="src/android/libs/armeabi/libbarcodereader.so" target="libs/armeabi/libbarcodereader.so">
-<resource-file src="src/android/libs/armeabi/libbarcodereader44.so" target="libs/armeabi/libbarcodereader44.so">
-<resource-file src="src/android/libs/armeabi/libbarcodereader70.so" target="libs/armeabi/libbarcodereader70.so">
-<resource-file src="src/android/libs/armeabi/libbarcodereader80.so" target="libs/armeabi/libbarcodereader80.so">
+        <resource-file src="src/android/libs/arm64-v8a/libIAL.so" target="libs/arm64-v8a/libIAL.so"/>
+<resource-file src="src/android/libs/arm64-v8a/libSDL.so" target="libs/arm64-v8a/libSDL.so"/>
+<resource-file src="src/android/libs/arm64-v8a/libbarcodereader44.so" target="libs/arm64-v8a/libbarcodereader44.so"/>
+<resource-file src="src/android/libs/arm64-v8a/libbarcodereader70.so" target="libs/arm64-v8a/libbarcodereader70.so"/>
+<resource-file src="src/android/libs/arm64-v8a/libbarcodereader80.so" target="libs/arm64-v8a/libbarcodereader80.so"/>
+<resource-file src="src/android/libs/armeabi/libIAL.so" target="libs/armeabi/libIAL.so"/>
+<resource-file src="src/android/libs/armeabi/libSDL.so" target="libs/armeabi/libSDL.so"/>
+<resource-file src="src/android/libs/armeabi/libbarcodereader.so" target="libs/armeabi/libbarcodereader.so"/>
+<resource-file src="src/android/libs/armeabi/libbarcodereader44.so" target="libs/armeabi/libbarcodereader44.so"/>
+<resource-file src="src/android/libs/armeabi/libbarcodereader70.so" target="libs/armeabi/libbarcodereader70.so"/>
+<resource-file src="src/android/libs/armeabi/libbarcodereader80.so" target="libs/armeabi/libbarcodereader80.so"/>
     
          <!--  drawable src/android/resources -->
         <resource-file src="src/android/res/drawable-hdpi/pebuu_africa.jpg" target="res/drawable-hdpi/pebuu_africa.jpg" />
