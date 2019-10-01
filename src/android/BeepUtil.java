@@ -29,7 +29,7 @@ public class BeepUtil {
 
         mSoundPool = new SoundPool(1, AudioManager.STREAM_NOTIFICATION, 0);
         //mSoundID = mSoundPool.load(mContext, R.raw.beep, 1);
-        mSoundID = mSoundPool.load(mContext, R.raw.beep, 1);
+        mSoundID = mSoundPool.load(mContext, 1, 1);
     }
 
     public void beep() {
