@@ -4,7 +4,7 @@ import android.content.Context;
 import android.media.AudioManager;
 import android.media.SoundPool;
 
-import com.zebra.sdl.R;
+//import com.zebra.sdl.R;
 
 public class BeepUtil {
 
