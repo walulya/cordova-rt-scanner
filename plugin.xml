@@ -28,7 +28,7 @@
 	        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
         </config-file>
 
-        <source-file src="com/zebra/adc/decoder/BarCodeReader.java" target-dir="com/zebra/adc/decoder/BarCodeReader" />
+        <source-file src="src/android/com/zebra/adc/decoder/BarCodeReader.java" target-dir="com/zebra/adc/decoder/BarCodeReader" />
         <source-file src="src/android/BarcodeScanner.java" target-dir="src/com/pebuu/scanner/BarcodeScanner" />
         <source-file src="src/android/BeepUtil.java" target-dir="src/com/pebuu/scanner/BeepUtil" />
         <source-file src="src/android/libs/printer_library.jar" target-dir="libs" />
