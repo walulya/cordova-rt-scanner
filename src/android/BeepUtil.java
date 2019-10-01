@@ -4,7 +4,7 @@ import android.content.Context;
 import android.media.AudioManager;
 import android.media.SoundPool;
 
-import com.pebuu.scanner.R;
+//import com.pebuu.scanner.R;
 
 public class BeepUtil {
 
