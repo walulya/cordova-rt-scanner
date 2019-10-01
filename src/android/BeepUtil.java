@@ -6,6 +6,7 @@ import android.media.SoundPool;
 
 //import com.pebuu.scanner.R;
 
+
 public class BeepUtil {
 
     private Context mContext;
@@ -15,6 +16,7 @@ public class BeepUtil {
     private AudioManager mAm;
 
     private static BeepUtil mInstance;
+
 
     public static BeepUtil getInstance(Context context) {
         if (mInstance == null) {
