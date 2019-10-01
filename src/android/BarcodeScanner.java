@@ -36,6 +36,7 @@ public class BarcodeScanner extends CordovaPlugin {
             //listBT(callbackContext);
             return true;
         }
+        return false;
     }
 
         private void coolMethod(String message, CallbackContext callbackContext) {
