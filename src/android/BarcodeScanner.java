@@ -25,7 +25,7 @@ import java.io.PrintWriter;
 import android.app.Activity;
 import android.os.AsyncTask;
 
-import com.zebra.adc.decoder.BarCodeReader;
+//import com.zebra.adc.decoder.BarCodeReader;
 
 public class BarcodeScanner extends CordovaPlugin {
     @Override
