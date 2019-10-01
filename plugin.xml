@@ -1,31 +1,51 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-rtprinter" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="cordova-plugin-rtscanner" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>Printer</name>
-    <js-module name="Printer" src="www/Printer.js">
+    <js-module name="Printer" src="www/Scanner.js">
         <!--<clobbers target="cordova.plugins.Printer" /> -->
-        <clobbers target="RTPrinter" />
+        <clobbers target="RTScanner" />
     </js-module>
-   <js-module src="www/PrinterConstants.js" name="Camera">
-        <clobbers target="RTConstants" />
+   <js-module src="www/ScannerConstants.js" name="Camera">
+        <clobbers target="SCConstants" />
     </js-module>
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
-            <feature name="Printer">
-                <param name="android-package" value="pebuu.printer.Printer" />
+            <feature name="BarcodeScanner">
+                <param name="android-package" value="com.pebuu.scanner.BarcodeScanner" />
+                <param name="onload" value="true" />
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml">
             <uses-permission android:name="android.permission.BLUETOOTH" />
             <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+            <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+		    <uses-feature android:name="android.hardware.camera" />	
+		    <uses-feature android:name="android.hardware.camera.autofocus" /> 
+	        <uses-permission android:name="android.permission.FLASHLIGHT"></uses-permission>
+	        <uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+	        <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	        <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+	        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
         </config-file>
 
-        <source-file src="src/android/Printer.java" target-dir="src/pebuu/printer/Printer" />
-        <source-file src="src/android/BaseEnum.java" target-dir="src/pebuu/printer/BaseEnum" />
-        <source-file src="src/android/TonyUtils.java" target-dir="src/pebuu/printer/TonyUtils" />
+        <source-file src="com/zebra/adc/decoder/BarCodeReader.java" target-dir="com/zebra/adc/decoder/BarCodeReader" />
+        <source-file src="src/android/BarcodeScanner.java" target-dir="src/com/pebuu/scanner/BarcodeScanner" />
+        <source-file src="src/android/BeepUtil.java" target-dir="src/com/pebuu/scanner/BeepUtil" />
         <source-file src="src/android/libs/printer_library.jar" target-dir="libs" />
         <!--
         <source-file src="src/android/libs/android-support-annotations.jar" target-dir="libs" />
         -->
+        <resource-file src="src/android/libs/arm64-v8a/libIAL.so" target="libs/arm64-v8a/libIAL.so">
+<resource-file src="src/android/libs/arm64-v8a/libSDL.so" target="libs/arm64-v8a/libSDL.so">
+<resource-file src="src/android/libs/arm64-v8a/libbarcodereader44.so" target="libs/arm64-v8a/libbarcodereader44.so">
+<resource-file src="src/android/libs/arm64-v8a/libbarcodereader70.so" target="libs/arm64-v8a/libbarcodereader70.so">
+<resource-file src="src/android/libs/arm64-v8a/libbarcodereader80.so" target="libs/arm64-v8a/libbarcodereader80.so">
+<resource-file src="src/android/libs/armeabi/libIAL.so" target="libs/armeabi/libIAL.so">
+<resource-file src="src/android/libs/armeabi/libSDL.so" target="libs/armeabi/libSDL.so">
+<resource-file src="src/android/libs/armeabi/libbarcodereader.so" target="libs/armeabi/libbarcodereader.so">
+<resource-file src="src/android/libs/armeabi/libbarcodereader44.so" target="libs/armeabi/libbarcodereader44.so">
+<resource-file src="src/android/libs/armeabi/libbarcodereader70.so" target="libs/armeabi/libbarcodereader70.so">
+<resource-file src="src/android/libs/armeabi/libbarcodereader80.so" target="libs/armeabi/libbarcodereader80.so">
     
          <!--  drawable src/android/resources -->
         <resource-file src="src/android/res/drawable-hdpi/pebuu_africa.jpg" target="res/drawable-hdpi/pebuu_africa.jpg" />
