@@ -4,7 +4,7 @@ import android.content.Context;
 import android.media.AudioManager;
 import android.media.SoundPool;
 
-//import com.zebra.sdl.R;
+import com.pebuu.scanner.R;
 
 public class BeepUtil {
 
@@ -29,7 +29,7 @@ public class BeepUtil {
 
         mSoundPool = new SoundPool(1, AudioManager.STREAM_NOTIFICATION, 0);
         //mSoundID = mSoundPool.load(mContext, R.raw.beep, 1);
-        mSoundID = mSoundPool.load(mContext, 2, 1);
+        mSoundID = mSoundPool.load(mContext, R.raw.beep, 1);
     }
 
     public void beep() {
