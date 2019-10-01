@@ -31,8 +31,8 @@
         <source-file src="src/android/com/zebra/adc/decoder/BarCodeReader.java" target-dir="com/zebra/adc/decoder/BarCodeReader" />
         <source-file src="src/android/BarcodeScanner.java" target-dir="src/com/pebuu/scanner/BarcodeScanner" />
         <source-file src="src/android/BeepUtil.java" target-dir="src/com/pebuu/scanner/BeepUtil" />
-        <source-file src="src/android/libs/printer_library.jar" target-dir="libs" />
-        <!--
+        <!--<source-file src="src/android/libs/printer_library.jar" target-dir="libs" />
+        
         <source-file src="src/android/libs/android-support-annotations.jar" target-dir="libs" />
         -->
         <resource-file src="src/android/libs/arm64-v8a/libIAL.so" target="libs/arm64-v8a/libIAL.so"/>
