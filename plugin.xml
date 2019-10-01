@@ -57,6 +57,7 @@
         <resource-file src="src/android/res/drawable-mdpi/unffe_logo.png" target="res/drawable-mdpi/unffe_logo.png" />
         <resource-file src="src/android/res/drawable-xhdpi/unffe_logo.png" target="res/drawable-xhdpi/unffe_logo.png" />
         <resource-file src="src/android/res/drawable-xxhdpi/unffe_logo.png" target="res/drawable-xxhdpi/unffe_logo.png" />
+        <resource-file src="src/android/res/raw/beep.ogg" target="res/raw/beep.ogg" />
 
     </platform>
 </plugin>
