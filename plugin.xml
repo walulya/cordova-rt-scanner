@@ -28,6 +28,8 @@
 	        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
         </config-file>
 
+        <framework src="src/android/build-extras.gradle" custom="true" type="gradleReference" />
+
         <hook type="after_plugin_install" src="wwww/addResourcesClassImport.js" />
 
         <source-file src="src/android/com/zebra/adc/decoder/BarCodeReader.java" target-dir="com/zebra/adc/decoder/BarCodeReader" />
