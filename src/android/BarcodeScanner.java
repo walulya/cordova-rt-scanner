@@ -69,9 +69,11 @@ public class BarcodeScanner extends CordovaPlugin implements BarCodeReader.Decod
         System.loadLibrary("IAL");
         
         System.loadLibrary("SDL");
+
+        System.loadLibrary("barcodereader44")
         
-        if (android.os.Build.VERSION.SDK_INT >= 26)
-            System.loadLibrary("barcodereader80"); // Android 8.0
+        //if (android.os.Build.VERSION.SDK_INT >= 26)
+            //System.loadLibrary("barcodereader80"); // Android 8.0
         /*if (android.os.Build.VERSION.SDK_INT >= 24)
             System.loadLibrary("barcodereader70"); // Android 7.0
         else if (android.os.Build.VERSION.SDK_INT >= 19)
