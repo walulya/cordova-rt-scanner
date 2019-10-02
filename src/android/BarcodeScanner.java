@@ -113,7 +113,7 @@ public class BarcodeScanner extends CordovaPlugin implements BarCodeReader.Decod
             /* Indicating success is failure is done by calling the appropriate method on the 
             callbackContext.*/
             int result = arg1 + arg2;
-            callbackContext.success("result calculated in Java: " + result);
+            callbackContext.success(android.os.Build.VERSION.SDK_INT + " result calculated in Java: " + result);
             return true;
         }
         return false;
