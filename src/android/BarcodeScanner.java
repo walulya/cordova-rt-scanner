@@ -65,29 +65,7 @@ public class BarcodeScanner extends CordovaPlugin implements BarCodeReader.Decod
     
     
 
-    static {
-        System.loadLibrary("IAL");
-        
-        System.loadLibrary("SDL");
 
-        System.loadLibrary("barcodereader");
-        
-        //if (android.os.Build.VERSION.SDK_INT >= 26)
-            //System.loadLibrary("barcodereader80"); // Android 8.0
-        /*if (android.os.Build.VERSION.SDK_INT >= 24)
-            System.loadLibrary("barcodereader70"); // Android 7.0
-        else if (android.os.Build.VERSION.SDK_INT >= 19)
-            System.loadLibrary("barcodereader44"); // Android 4.4
-        else if (android.os.Build.VERSION.SDK_INT >= 18)
-            System.loadLibrary("barcodereader43"); // Android 4.3
-        else
-            System.loadLibrary("barcodereader"); // Android 2.3 - Android 4.2
-        */
-        // System.loadLibrary("barcodereader"); // Android 2.3 - Android 4.2
-
-        
-        
-    }  
 
     
     @Override
@@ -163,5 +141,29 @@ public class BarcodeScanner extends CordovaPlugin implements BarCodeReader.Decod
     public void showToast(String msg){
         Toast.makeText(cordova.getActivity().getWindow().getContext(), msg, Toast.LENGTH_SHORT).show();
     }
+
+    static {
+        System.loadLibrary("IAL");
+        
+        System.loadLibrary("SDL");
+
+        System.loadLibrary("barcodereader");
+        
+        //if (android.os.Build.VERSION.SDK_INT >= 26)
+            //System.loadLibrary("barcodereader80"); // Android 8.0
+        /*if (android.os.Build.VERSION.SDK_INT >= 24)
+            System.loadLibrary("barcodereader70"); // Android 7.0
+        else if (android.os.Build.VERSION.SDK_INT >= 19)
+            System.loadLibrary("barcodereader44"); // Android 4.4
+        else if (android.os.Build.VERSION.SDK_INT >= 18)
+            System.loadLibrary("barcodereader43"); // Android 4.3
+        else
+            System.loadLibrary("barcodereader"); // Android 2.3 - Android 4.2
+        */
+        // System.loadLibrary("barcodereader"); // Android 2.3 - Android 4.2
+
+        
+        
+    }  
 
 }
