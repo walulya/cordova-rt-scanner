@@ -1,16 +1,16 @@
 android {
     packagingOptions {
-        pickFirst 'libs/arm64-v8a/libIAL.so'
-        pickFirst 'libs/arm64-v8a/libSDL.so'
-        pickFirst 'libs/arm64-v8a/libbarcodereader44.so'
-        pickFirst 'libs/arm64-v8a/libbarcodereader70.so'
-        pickFirst 'libs/arm64-v8a/libbarcodereader80.so'
-        pickFirst 'libs/armeabi/libIAL.so'
-        pickFirst 'libs/armeabi/libSDL.so'
-        pickFirst 'libs/armeabi/libbarcodereader.so'
-        pickFirst 'libs/armeabi/libbarcodereader44.so'
-        pickFirst 'libs/armeabi/libbarcodereader70.so'
-        pickFirst 'libs/armeabi/libbarcodereader80.so'
+        pickFirst 'lib/arm64-v8a/libIAL.so'
+        pickFirst 'lib/arm64-v8a/libSDL.so'
+        pickFirst 'lib/arm64-v8a/libbarcodereader44.so'
+        pickFirst 'lib/arm64-v8a/libbarcodereader70.so'
+        pickFirst 'lib/arm64-v8a/libbarcodereader80.so'
+        pickFirst 'lib/armeabi/libIAL.so'
+        pickFirst 'lib/armeabi/libSDL.so'
+        pickFirst 'lib/armeabi/libbarcodereader.so'
+        pickFirst 'lib/armeabi/libbarcodereader44.so'
+        pickFirst 'lib/armeabi/libbarcodereader70.so'
+        pickFirst 'lib/armeabi/libbarcodereader80.so'
     }
     defaultConfig {
         externalNativeBuild {
