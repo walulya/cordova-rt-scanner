@@ -79,6 +79,18 @@ public class BarcodeScanner extends CordovaPlugin implements BarCodeReader.Decod
     }
 
     @Override
+    public void initialize(CordovaInterface cordova, CordovaWebView webView)
+    {
+        super.initialize(cordova, webView);
+        //wedge = new DataWedgeIntentHandler(cordova.getActivity().getBaseContext());
+        
+        // sound
+        tg = new ToneGenerator(AudioManager.STREAM_MUSIC,
+                ToneGenerator.MAX_VOLUME);
+        showToast("Zebra-SDLgui", "mainScreen ");
+    }
+
+    @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("coolMethod")) {
             String message = args.getString(0);
