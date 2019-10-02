@@ -1,8 +1,8 @@
 var exec = require('cordova/exec');
 
-var PLUGIN_NAME = 'Printer';
+var PLUGIN_NAME = 'Scanner';
 
-var RTPrinter = {
+var RTScanner = {
     add: function (args, cb) {
         //exec(cb, null, PLUGIN_NAME, 'echo', [phrase]);
         exec(cb, null, PLUGIN_NAME, "performAdd", args);
@@ -49,8 +49,8 @@ var RTPrinter = {
 }
 
 exports.coolMethod = function (arg0, success, error) {
-    exec(success, error, 'Printer', 'coolMethod', [arg0]);
+    exec(success, error, 'Scanner', 'coolMethod', [arg0]);
 };
 
 
-module.exports = RTPrinter;
+module.exports = RTScanner;

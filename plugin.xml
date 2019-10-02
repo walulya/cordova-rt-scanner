@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="cordova-plugin-rtscanner" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>Printer</name>
-    <js-module name="Printer" src="www/Scanner.js">
+    <js-module name="Scanner" src="www/Scanner.js">
         <!--<clobbers target="cordova.plugins.Printer" /> -->
         <clobbers target="RTScanner" />
     </js-module>
