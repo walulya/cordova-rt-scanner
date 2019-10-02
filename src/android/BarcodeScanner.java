@@ -28,8 +28,56 @@ import android.os.AsyncTask;
 //import com.zebra.adc.decoder.BarCodeReader;
 
 public class BarcodeScanner extends CordovaPlugin implements BarCodeReader.DecodeCallback {
+        // states
+    static final int STATE_IDLE = 0;
+    static final int STATE_DECODE = 1;
+    static final int STATE_HANDSFREE = 2;
+    static final int STATE_PREVIEW = 3; // snapshot preview mode
+    static final int STATE_SNAPSHOT = 4;
+    static final int STATE_VIDEO = 5;
+    static final int STATE_GEN_PREVIEW = 6; // generic (non-SDL) preview mode
+    static final int STATE_GEN_SURFACE = 7; // Surface Created
+
+        // system
+    private ToneGenerator tg = null;
+
+    // BarCodeReader specifics
+    private BarCodeReader bcr = null;
+
+    private boolean beepMode = true; // decode beep enable
+    private boolean snapPreview = false; // snapshot preview mode enabled - true
+    // - calls viewfinder which gets
+    // handled by
+    private int trigMode = BarCodeReader.ParamVal.LEVEL;
+    private boolean atMain = false;
+    private int state = STATE_IDLE;
+    private int decodes = 0;
+
     private int motionEvents = 0;
     private int modechgEvents = 0;
+
+    private String decodeDataString;
+    private String decodeStatString;
+    private static int decCount = 0;
+
+    static {
+        System.loadLibrary("IAL");
+        System.loadLibrary("SDL");
+
+        if (android.os.Build.VERSION.SDK_INT >= 26)
+            System.loadLibrary("barcodereader80"); // Android 8.0
+        if (android.os.Build.VERSION.SDK_INT >= 24)
+            System.loadLibrary("barcodereader70"); // Android 7.0
+        else if (android.os.Build.VERSION.SDK_INT >= 19)
+            System.loadLibrary("barcodereader44"); // Android 4.4
+        else if (android.os.Build.VERSION.SDK_INT >= 18)
+            System.loadLibrary("barcodereader43"); // Android 4.3
+        else
+            System.loadLibrary("barcodereader"); // Android 2.3 - Android 4.2
+
+        // System.loadLibrary("barcodereader"); // Android 2.3 - Android 4.2
+    }
+
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("coolMethod")) {
