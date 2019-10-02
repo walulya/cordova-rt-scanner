@@ -88,9 +88,9 @@ public class BarcodeScanner extends CordovaPlugin implements BarCodeReader.Decod
         //wedge = new DataWedgeIntentHandler(cordova.getActivity().getBaseContext());
         
         // sound
-        tg = new ToneGenerator(AudioManager.STREAM_MUSIC,
-                ToneGenerator.MAX_VOLUME);
-        showToast("Zebra-SDLgui mainScreen ");
+        //tg = new ToneGenerator(AudioManager.STREAM_MUSIC,
+        //        ToneGenerator.MAX_VOLUME);
+        //showToast("Zebra-SDLgui mainScreen ");
     }
 
     @Override
