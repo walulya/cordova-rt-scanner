@@ -27,7 +27,9 @@ import android.os.AsyncTask;
 
 //import com.zebra.adc.decoder.BarCodeReader;
 
-public class BarcodeScanner extends CordovaPlugin {
+public class BarcodeScanner extends CordovaPlugin implements BarCodeReader.DecodeCallback {
+    private int motionEvents = 0;
+    private int modechgEvents = 0;
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("coolMethod")) {
@@ -45,6 +47,41 @@ public class BarcodeScanner extends CordovaPlugin {
         } else {
             callbackContext.error("Expected one non-empty string argument.");
         }
+    }
+    // ----------------------------------------
+    @Override
+    public void onEvent(int event, int info, byte[] data, BarCodeReader reader) {
+        switch (event) {
+            case BarCodeReader.BCRDR_EVENT_SCAN_MODE_CHANGED:
+                ++modechgEvents;
+                showToast("Scan Mode Changed Event (#" + modechgEvents + ")");
+                break;
+
+            case BarCodeReader.BCRDR_EVENT_MOTION_DETECTED:
+                ++motionEvents;
+                showToast("Motion Detect Event (#" + motionEvents + ")");
+                break;
+
+            case BarCodeReader.BCRDR_EVENT_SCANNER_RESET:
+                // dspStat("Reset Event"); // No need to display this event
+                break;
+
+            default:
+                // process any other events here
+                break;
+        }
+    }
+        // ----------------------------------------
+    // BarCodeReader.DecodeCallback override
+    @Override
+    public void onDecodeComplete(int symbology, int length, byte[] data,
+            BarCodeReader reader) 
+    {
+    
+    }
+
+    public void showToast(String msg){
+        Toast.makeText(cordova.getActivity().getWindow().getContext(), msg, Toast.LENGTH_SHORT).show();
     }
 
 }
