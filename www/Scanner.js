@@ -1,6 +1,6 @@
 var exec = require('cordova/exec');
 
-var PLUGIN_NAME = 'Scanner';
+var PLUGIN_NAME = 'BarcodeScanner';
 
 var RTScanner = {
     add: function (args, cb) {
@@ -49,7 +49,7 @@ var RTScanner = {
 }
 
 exports.coolMethod = function (arg0, success, error) {
-    exec(success, error, 'Scanner', 'coolMethod', [arg0]);
+    exec(success, error, 'BarcodeScanner', 'coolMethod', [arg0]);
 };
 
 

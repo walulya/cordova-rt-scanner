@@ -113,7 +113,7 @@ public class BarcodeScanner extends CordovaPlugin implements BarCodeReader.Decod
         return false;
     }
 
-        private void coolMethod(String message, CallbackContext callbackContext) {
+    private void coolMethod(String message, CallbackContext callbackContext) {
         if (message != null && message.length() > 0) {
             callbackContext.success(message);
         } else {
